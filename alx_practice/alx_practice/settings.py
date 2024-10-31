@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'products'
+    'product'
 ]
 
 MIDDLEWARE = [
@@ -77,7 +77,7 @@ WSGI_APPLICATION = 'alx_practice.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': BASE_DIR / 'dbalxpractice',
+        'NAME': 'dbalxpractice',
         'USER': 'root',
         'PASSWORD': '@Mikist@23.@Mikist@23.',
         'HOST' : 'localhost',
