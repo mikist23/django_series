@@ -12,3 +12,15 @@ def drinks(request, drink_name):
     }
     choice_of_drink = drink[drink_name]
     return HttpResponse(f"<h2>{drink_name}</h2> " + choice_of_drink)
+
+def home(request):
+    return HttpResponse('Welcome to Little Lemon!')
+
+def about(request):
+    return HttpResponse("About us")
+
+def menu(request):
+    return HttpResponse('<h1>Menu</h1>')
+
+def book(request):
+    return HttpResponse('<h1>Make a booking!</h1>')
