@@ -13,4 +13,12 @@ class Drinks(models.Model):
     
 
     def __str__(self):
-        return super().__str__()
+        return self.drink
+    
+class Booking(models.Model):
+    first_name = models.CharField(max_length=200)
+    last_name = models.CharField(max_length=200)
+    guest_count =models.IntegerField()
+    reservation_time = models.DateField(auto_now=True)
+    comments = models.CharField(max_length=1000)
+    
