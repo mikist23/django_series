@@ -1,4 +1,17 @@
+
+
+{% extends "base.html" %}
 {% load static %}
+
+{% block content  %}
+
+<h1 style="color: #495E57">Menu</h1>
+<p> This is a menu page for a Little Lemon</p> 
+<img src="{% static 'img/dessert.jpg' %}">
+{% endblock  %}
+
+
+{% comment %} {% comment %} {% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,6 +22,7 @@
 </head>
 <body>
 <!-- Add heading code -->
+ {% extends "base.html" %}
  <h1 style="color: #495E57">Menu</h1>
 
 <!-- Add paragraph code -->
@@ -16,7 +30,7 @@
 <p> {{context.about}}</p> 
 {% endcomment %}
 
-{% if menu %}
+{% comment %} {% if menu %}
 {%for menus in menu%}
 <ul>
 <li>{{menus.name}}: {{menus.price}}</li>
@@ -28,12 +42,12 @@
 {% else %}
 <p> No  items to display</p> 
 
-{% endif %} 
+{% endif %}  {% endcomment %}
 
 
 
-<!-- Add image code -->
-
-<img src="{% static 'dessert.jpg' %}">
+{% comment %} <!-- Add image code -->
+<p> This is a menu page</p> 
+<img src="{% static 'img/dessert.jpg' %}">
 </body>
-</html>
+</html> {% endcomment %} 
