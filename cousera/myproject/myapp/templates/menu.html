@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,9 +12,28 @@
  <h1 style="color: #495E57">Menu</h1>
 
 <!-- Add paragraph code -->
-<p> {{context}}</p>
+{% comment %} 
+<p> {{context.about}}</p> 
+{% endcomment %}
+
+{% if menu %}
+{%for menus in menu%}
+<ul>
+<li>{{menus.name}}: {{menus.price}}</li>
+<br>
+
+</ul>
+
+{% endfor %}
+{% else %}
+<p> No  items to display</p> 
+
+{% endif %} 
+
+
+
 <!-- Add image code -->
-{% load static %}
+
 <img src="{% static 'dessert.jpg' %}">
 </body>
 </html>
