@@ -21,4 +21,10 @@ class Booking(models.Model):
     guest_count =models.IntegerField()
     reservation_time = models.DateField(auto_now=True)
     comments = models.CharField(max_length=1000)
+
+class Employees(models.Model):
+    first_name = models.CharField(max_length=200)
+    last_name = models.CharField(max_length=200)
+    role =models.CharField(max_length=100)
+    shift = models.IntegerField()
     
